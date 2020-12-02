@@ -1,5 +1,5 @@
 :root{
-  --mainBlur: #2a2a72;
+  --mainBlue: #2a2a72;
   --lightBlue: #009ffd;
   --mainWhite: #f3f3f3f3;
   --mainDark: #232528;
@@ -19,7 +19,7 @@ body{
 }
 
 .text-blue {
-  color: var(--mainBlur);
+  color: var(--mainBlue);
 }
 
 .text-light {
