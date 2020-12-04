@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import PropTypes from 'prop-types';
 
 export default class Product extends Component {
     render() {
@@ -33,6 +34,16 @@ export default class Product extends Component {
     }
 }
 
+Product.propTypes = {
+    product:PropTypes.shape({
+        id:PropTypes.number,
+        img:PropTypes.string,
+        title:PropTypes.string,
+        price:PropTypes.number,
+        inCart:PropTypes.bool
+    }).isRequired
+}
+
 const ProductWrapper = styled.div`
 .card {
     border-color: transparent;
@@ -51,5 +62,22 @@ const ProductWrapper = styled.div`
     .card-footer {
         background: rgba(247,247,247);
     }
+}
+.card-img-top {
+    transition: all 1s linear;
+}
+.img-container:hover .card-img-top {
+    transform: scale(1.2);
+}
+.card-btn {
+    position: absolute;
+    bottom: 3rem;
+    right: 0;
+    padding: 0.2rem, 0.4rem;
+    border: none;
+    background: var(--lightBlue);
+    color: var(--mainWhite);
+    font-size: 1.4rem;
+    border-radius: 0.5rem 0 0 0;
 }
 `
