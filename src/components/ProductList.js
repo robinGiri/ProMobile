@@ -12,7 +12,7 @@ export default class ProductList extends Component {
                         <Title name='our' title='products' />
                         <div className="row">
                             <ProductConsumer>
-                                {(data) => {return data.product.map(product => {return <Product key={product.id} ptoducts={product} />})}}
+                                {(data) => {return data.product.map(product => {return <Product key={product.id} product={product} />})}}
                             </ProductConsumer>
                         </div>
                     </div>
