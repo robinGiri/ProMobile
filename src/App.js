@@ -23,7 +23,7 @@ function App() {
         <Route path="/details" component={Details} />
         <Route component={Default} />
       </Switch>
-      <Modal></Modal>
+      <Modal />
     </React.Fragment>
   );
 }
